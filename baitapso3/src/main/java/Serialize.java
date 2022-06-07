@@ -15,10 +15,15 @@ public class Serialize {
         //Instantiating generated emp class
         Person p1 =new Person();
         Person p2 =new Person();
+        Person p3 =new Person();
+
         PeopleList peopleList = new PeopleList();
         PeopleList peopleList1 = new PeopleList();
+        PeopleList peopleList2 = new PeopleList();
+
         List<Person> people = new ArrayList<>();
         List<Person> people2 = new ArrayList<>();
+        List<Person> people3 = new ArrayList<>();
 
         p1.setFirstName("nguyen");
         p1.setLastName("dat");
@@ -28,6 +33,7 @@ public class Serialize {
         peopleList.setDiachi("thuy phuong");
         peopleList.setEmail("nguyen@gmail.com");
         peopleList.setPhuongtien("xe may");
+        peopleList.setSodienthoai(123456l);
 
         p2.setFirstName("abc");
         p2.setLastName("xyz");
@@ -37,6 +43,17 @@ public class Serialize {
         peopleList1.setPhuongtien("di bo");
         peopleList1.setEmail("abc@gmail.com");
         peopleList1.setDiachi("ha noi");
+        peopleList1.setSodienthoai(654321l);
+
+        p3.setFirstName("tu0den9");
+        p3.setLastName("tu9ve0");
+        people3.add(p3);
+        peopleList2.setTen(people3);
+        peopleList2.setMaso(3);
+        peopleList2.setPhuongtien("xe dap");
+        peopleList2.setEmail("abcxyz@gmail.com");
+        peopleList2.setDiachi("ha noi");
+        peopleList2.setSodienthoai(12321l);
 
         DatumWriter<PeopleList> empDatumWriter = new SpecificDatumWriter<PeopleList>(PeopleList.class);
         DataFileWriter<PeopleList> empFileWriter = new DataFileWriter<PeopleList>(empDatumWriter);
@@ -45,7 +62,7 @@ public class Serialize {
 
         empFileWriter.append(peopleList);
         empFileWriter.append(peopleList1);
-
+        empFileWriter.append(peopleList2);
 
         empFileWriter.close();
 
