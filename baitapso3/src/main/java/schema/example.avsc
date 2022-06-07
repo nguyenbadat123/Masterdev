@@ -1,0 +1,32 @@
+{
+  "namespace": "baitap",
+  "type" : "record",
+  "name" : "PeopleList",
+  "fields" : [
+    {"name" : "Version", "type" : "int"},
+    {"name" : "People", "type" : {
+      "namespace": "baitap",
+      "type": "array",
+      "items": {
+        "type": "record",
+        "namespace": "baitap",
+        "name": "Person",
+        "fields": [
+          {
+            "name": "FirstName",
+            "type": "string"
+          },
+          {
+            "name": "LastName",
+            "type": "string"
+          }
+        ]
+      }
+    }
+    },
+    {"name": "diachi","type": "string"},
+    {"name": "sodienthoai","type": "long"},
+    {"name": "email","type": "string"},
+    {"name": "phuongtien","type": "string"}
+  ]
+}
