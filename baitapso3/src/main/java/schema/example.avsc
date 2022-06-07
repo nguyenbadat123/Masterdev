@@ -3,8 +3,8 @@
   "type" : "record",
   "name" : "PeopleList",
   "fields" : [
-    {"name" : "Version", "type" : "int"},
-    {"name" : "People", "type" : {
+    {"name" : "maso", "type" : "int"},
+    {"name" : "ten", "type" : {
       "namespace": "baitap",
       "type": "array",
       "items": {

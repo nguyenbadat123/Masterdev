@@ -23,8 +23,8 @@ public class Serialize {
         p1.setFirstName("nguyen");
         p1.setLastName("dat");
         people.add(p1);
-        peopleList.setPeople(people);
-        peopleList.setVersion(1);
+        peopleList.setTen(people);
+        peopleList.setMaso(1);
         peopleList.setDiachi("thuy phuong");
         peopleList.setEmail("nguyen@gmail.com");
         peopleList.setPhuongtien("xe may");
@@ -32,8 +32,8 @@ public class Serialize {
         p2.setFirstName("abc");
         p2.setLastName("xyz");
         people2.add(p2);
-        peopleList1.setPeople(people2);
-        peopleList1.setVersion(2);
+        peopleList1.setTen(people2);
+        peopleList1.setMaso(2);
         peopleList1.setPhuongtien("di bo");
         peopleList1.setEmail("abc@gmail.com");
         peopleList1.setDiachi("ha noi");

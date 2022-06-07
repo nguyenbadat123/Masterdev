@@ -7,10 +7,10 @@ package baitap;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class PeopleList extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PeopleList\",\"namespace\":\"baitap\",\"fields\":[{\"name\":\"Version\",\"type\":\"int\"},{\"name\":\"People\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Person\",\"fields\":[{\"name\":\"FirstName\",\"type\":\"string\"},{\"name\":\"LastName\",\"type\":\"string\"}]}}},{\"name\":\"diachi\",\"type\":\"string\"},{\"name\":\"sodienthoai\",\"type\":\"long\"},{\"name\":\"email\",\"type\":\"string\"},{\"name\":\"phuongtien\",\"type\":\"string\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PeopleList\",\"namespace\":\"baitap\",\"fields\":[{\"name\":\"maso\",\"type\":\"int\"},{\"name\":\"ten\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Person\",\"fields\":[{\"name\":\"FirstName\",\"type\":\"string\"},{\"name\":\"LastName\",\"type\":\"string\"}]}}},{\"name\":\"diachi\",\"type\":\"string\"},{\"name\":\"sodienthoai\",\"type\":\"long\"},{\"name\":\"email\",\"type\":\"string\"},{\"name\":\"phuongtien\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
-  @Deprecated public int Version;
-  @Deprecated public java.util.List<baitap.Person> People;
+  @Deprecated public int maso;
+  @Deprecated public java.util.List<baitap.Person> ten;
   @Deprecated public java.lang.CharSequence diachi;
   @Deprecated public long sodienthoai;
   @Deprecated public java.lang.CharSequence email;
@@ -26,9 +26,9 @@ public class PeopleList extends org.apache.avro.specific.SpecificRecordBase impl
   /**
    * All-args constructor.
    */
-  public PeopleList(java.lang.Integer Version, java.util.List<baitap.Person> People, java.lang.CharSequence diachi, java.lang.Long sodienthoai, java.lang.CharSequence email, java.lang.CharSequence phuongtien) {
-    this.Version = Version;
-    this.People = People;
+  public PeopleList(java.lang.Integer maso, java.util.List<baitap.Person> ten, java.lang.CharSequence diachi, java.lang.Long sodienthoai, java.lang.CharSequence email, java.lang.CharSequence phuongtien) {
+    this.maso = maso;
+    this.ten = ten;
     this.diachi = diachi;
     this.sodienthoai = sodienthoai;
     this.email = email;
@@ -39,8 +39,8 @@ public class PeopleList extends org.apache.avro.specific.SpecificRecordBase impl
   // Used by DatumWriter.  Applications should not call. 
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return Version;
-    case 1: return People;
+    case 0: return maso;
+    case 1: return ten;
     case 2: return diachi;
     case 3: return sodienthoai;
     case 4: return email;
@@ -52,8 +52,8 @@ public class PeopleList extends org.apache.avro.specific.SpecificRecordBase impl
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: Version = (java.lang.Integer)value$; break;
-    case 1: People = (java.util.List<baitap.Person>)value$; break;
+    case 0: maso = (java.lang.Integer)value$; break;
+    case 1: ten = (java.util.List<baitap.Person>)value$; break;
     case 2: diachi = (java.lang.CharSequence)value$; break;
     case 3: sodienthoai = (java.lang.Long)value$; break;
     case 4: email = (java.lang.CharSequence)value$; break;
@@ -63,33 +63,33 @@ public class PeopleList extends org.apache.avro.specific.SpecificRecordBase impl
   }
 
   /**
-   * Gets the value of the 'Version' field.
+   * Gets the value of the 'maso' field.
    */
-  public java.lang.Integer getVersion() {
-    return Version;
+  public java.lang.Integer getMaso() {
+    return maso;
   }
 
   /**
-   * Sets the value of the 'Version' field.
+   * Sets the value of the 'maso' field.
    * @param value the value to set.
    */
-  public void setVersion(java.lang.Integer value) {
-    this.Version = value;
+  public void setMaso(java.lang.Integer value) {
+    this.maso = value;
   }
 
   /**
-   * Gets the value of the 'People' field.
+   * Gets the value of the 'ten' field.
    */
-  public java.util.List<baitap.Person> getPeople() {
-    return People;
+  public java.util.List<baitap.Person> getTen() {
+    return ten;
   }
 
   /**
-   * Sets the value of the 'People' field.
+   * Sets the value of the 'ten' field.
    * @param value the value to set.
    */
-  public void setPeople(java.util.List<baitap.Person> value) {
-    this.People = value;
+  public void setTen(java.util.List<baitap.Person> value) {
+    this.ten = value;
   }
 
   /**
@@ -173,8 +173,8 @@ public class PeopleList extends org.apache.avro.specific.SpecificRecordBase impl
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<PeopleList>
     implements org.apache.avro.data.RecordBuilder<PeopleList> {
 
-    private int Version;
-    private java.util.List<baitap.Person> People;
+    private int maso;
+    private java.util.List<baitap.Person> ten;
     private java.lang.CharSequence diachi;
     private long sodienthoai;
     private java.lang.CharSequence email;
@@ -188,12 +188,12 @@ public class PeopleList extends org.apache.avro.specific.SpecificRecordBase impl
     /** Creates a Builder by copying an existing Builder */
     private Builder(baitap.PeopleList.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.Version)) {
-        this.Version = data().deepCopy(fields()[0].schema(), other.Version);
+      if (isValidValue(fields()[0], other.maso)) {
+        this.maso = data().deepCopy(fields()[0].schema(), other.maso);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.People)) {
-        this.People = data().deepCopy(fields()[1].schema(), other.People);
+      if (isValidValue(fields()[1], other.ten)) {
+        this.ten = data().deepCopy(fields()[1].schema(), other.ten);
         fieldSetFlags()[1] = true;
       }
       if (isValidValue(fields()[2], other.diachi)) {
@@ -217,12 +217,12 @@ public class PeopleList extends org.apache.avro.specific.SpecificRecordBase impl
     /** Creates a Builder by copying an existing PeopleList instance */
     private Builder(baitap.PeopleList other) {
             super(baitap.PeopleList.SCHEMA$);
-      if (isValidValue(fields()[0], other.Version)) {
-        this.Version = data().deepCopy(fields()[0].schema(), other.Version);
+      if (isValidValue(fields()[0], other.maso)) {
+        this.maso = data().deepCopy(fields()[0].schema(), other.maso);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.People)) {
-        this.People = data().deepCopy(fields()[1].schema(), other.People);
+      if (isValidValue(fields()[1], other.ten)) {
+        this.ten = data().deepCopy(fields()[1].schema(), other.ten);
         fieldSetFlags()[1] = true;
       }
       if (isValidValue(fields()[2], other.diachi)) {
@@ -243,51 +243,51 @@ public class PeopleList extends org.apache.avro.specific.SpecificRecordBase impl
       }
     }
 
-    /** Gets the value of the 'Version' field */
-    public java.lang.Integer getVersion() {
-      return Version;
+    /** Gets the value of the 'maso' field */
+    public java.lang.Integer getMaso() {
+      return maso;
     }
     
-    /** Sets the value of the 'Version' field */
-    public baitap.PeopleList.Builder setVersion(int value) {
+    /** Sets the value of the 'maso' field */
+    public baitap.PeopleList.Builder setMaso(int value) {
       validate(fields()[0], value);
-      this.Version = value;
+      this.maso = value;
       fieldSetFlags()[0] = true;
       return this; 
     }
     
-    /** Checks whether the 'Version' field has been set */
-    public boolean hasVersion() {
+    /** Checks whether the 'maso' field has been set */
+    public boolean hasMaso() {
       return fieldSetFlags()[0];
     }
     
-    /** Clears the value of the 'Version' field */
-    public baitap.PeopleList.Builder clearVersion() {
+    /** Clears the value of the 'maso' field */
+    public baitap.PeopleList.Builder clearMaso() {
       fieldSetFlags()[0] = false;
       return this;
     }
 
-    /** Gets the value of the 'People' field */
-    public java.util.List<baitap.Person> getPeople() {
-      return People;
+    /** Gets the value of the 'ten' field */
+    public java.util.List<baitap.Person> getTen() {
+      return ten;
     }
     
-    /** Sets the value of the 'People' field */
-    public baitap.PeopleList.Builder setPeople(java.util.List<baitap.Person> value) {
+    /** Sets the value of the 'ten' field */
+    public baitap.PeopleList.Builder setTen(java.util.List<baitap.Person> value) {
       validate(fields()[1], value);
-      this.People = value;
+      this.ten = value;
       fieldSetFlags()[1] = true;
       return this; 
     }
     
-    /** Checks whether the 'People' field has been set */
-    public boolean hasPeople() {
+    /** Checks whether the 'ten' field has been set */
+    public boolean hasTen() {
       return fieldSetFlags()[1];
     }
     
-    /** Clears the value of the 'People' field */
-    public baitap.PeopleList.Builder clearPeople() {
-      People = null;
+    /** Clears the value of the 'ten' field */
+    public baitap.PeopleList.Builder clearTen() {
+      ten = null;
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -395,8 +395,8 @@ public class PeopleList extends org.apache.avro.specific.SpecificRecordBase impl
     public PeopleList build() {
       try {
         PeopleList record = new PeopleList();
-        record.Version = fieldSetFlags()[0] ? this.Version : (java.lang.Integer) defaultValue(fields()[0]);
-        record.People = fieldSetFlags()[1] ? this.People : (java.util.List<baitap.Person>) defaultValue(fields()[1]);
+        record.maso = fieldSetFlags()[0] ? this.maso : (java.lang.Integer) defaultValue(fields()[0]);
+        record.ten = fieldSetFlags()[1] ? this.ten : (java.util.List<baitap.Person>) defaultValue(fields()[1]);
         record.diachi = fieldSetFlags()[2] ? this.diachi : (java.lang.CharSequence) defaultValue(fields()[2]);
         record.sodienthoai = fieldSetFlags()[3] ? this.sodienthoai : (java.lang.Long) defaultValue(fields()[3]);
         record.email = fieldSetFlags()[4] ? this.email : (java.lang.CharSequence) defaultValue(fields()[4]);
